@@ -5,10 +5,7 @@ import React from 'react'
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+ SheetTrigger,
   } from "@/components/ui/sheet"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -55,7 +52,7 @@ height={28}
     height="23"
     />
     <ul className='header-nav_elements'>
-        ///understand this code
+        
 {navLinks.map((link)=>{
     const isActive=link.route===pathname
     return(
@@ -64,7 +61,7 @@ height={28}
         key={link.route}>
             
 <Link className="sidebar-link cursor-pointer" href={link.route}>
-//also understand this code
+
 <Image
 src={link.icon}
 alt="logo"

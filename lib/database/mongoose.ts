@@ -8,13 +8,13 @@ interface MongooseConnection{
 
      }
      //caching our connection
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
      let cached:MongooseConnection=(global as any).mongoose
       
      if(!cached){
         cached=(global as any).mongoose={conn:null,promise:null}
      }
-    
+    /* eslint-enable @typescript-eslint/no-explicit-any */
      export const connectToDatabase=async()=>{
         if(cached.conn) return cached.conn;
         if(!MONGODB_URL) throw new Error ('MONGODB_URL is not defined');
